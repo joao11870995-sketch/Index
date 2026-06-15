@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard Logístico</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Dashboard de Entregas - BUG DO MILÊNIO</h1>
+
+<div class="dashboard">
+
+<div class="card alerta">
+<h3>Total de Entregas Atrasadas</h3>
+<p id="atrasadas"></p>
+</div>
+
+<div class="card">
+<h3>Total de Entregas</h3>
+<p id="total"></p>
+</div>
+
+<div class="card">
+<h3>Taxa de Atraso</h3>
+<p id="taxa"></p>
+</div>
+
+<div class="card bom">
+<h3>Entrega Mais Crítica</h3>
+<p id="critica"></p>
+</div>
+
+</div>
+
+<div class="filtro">
+
+<label>
+<b>Filtrar Transportadora:</b>
+</label>
+
+<select id="filtroTransportadora">
+<option value="Todos">Todos</option>
+<option value="RotaMax">RotaMax</option>
+<option value="ViaCargo">ViaCargo</option>
+<option value="FlashLog">FlashLog</option>
+</select>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Transportadora</th>
+<th>Região</th>
+<th>Prazo</th>
+<th>Dias Reais</th>
+<th>Status</th>
+</tr>
+
+</thead>
+
+<tbody id="tabela"></tbody>
+
+</table>
+
+<div class="rank">
+
+<h2>Ranking de Problemas Operacionais</h2>
+
+<ol id="ranking"></ol>
+
+</div>
+
+<br>
+
+<div class="graficos">
+
+<div class="grafico">
+<canvas id="graficoTransportadora"></canvas>
+</div>
+
+<div class="grafico">
+<canvas id="graficoRegiao"></canvas>
+</div>
+
+</div>
+
+<script src="dados.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
